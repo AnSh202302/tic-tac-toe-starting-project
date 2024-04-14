@@ -1,5 +1,18 @@
+import Player from "./conponents/Player";
+
 function App() {
-  return <p>Comming soon..</p>;
+  return (
+    <main>
+      <div id="game-container">
+        <ol id="players">
+          <Player initialName="Player 1" symbol="X" />
+          <Player initialName="Player 2" symbol="O" />
+        </ol>
+        GAME BLOCK
+      </div>
+      LOG
+    </main>
+  );
 }
 
 export default App;
