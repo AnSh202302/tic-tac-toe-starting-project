@@ -31,10 +31,13 @@ function GameBoard({ onSelectSquare, turns }) {
       {gameBoard.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol>
-            {row.map((pleyerSymbol, colIndex) => (
+            {row.map((playerSymbol, colIndex) => (
               <li key={colIndex}>
-                <button onClick={() => onSelectSquare(rowIndex, colIndex)}>
-                  {pleyerSymbol}
+                <button
+                  onClick={() => onSelectSquare(rowIndex, colIndex)}
+                  disabled={playerSymbol}
+                >
+                  {playerSymbol}
                 </button>
               </li>
             ))}
